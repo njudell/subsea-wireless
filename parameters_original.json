@@ -13,6 +13,18 @@
       "representation": "uint8"
     },
     {
+      "id": 129,
+      "name": "swig_version_minor",
+      "description": "SWIG Version Minor",
+      "representation": "uint8"
+    },
+    {
+      "id": 130,
+      "name": "swig_type_version_major",
+      "description": "SWIG Type Version Major",
+      "representation": "uint8"
+    },
+    {
       "id": 3,
       "name": "device_type",
       "description": "Device Type",
@@ -23,6 +35,36 @@
       "name": "comms_classification",
       "description": "C(omms) classification",
       "representation": "uint8"
+    },
+    {
+      "id": 131,
+      "name": "power_classification",
+      "description": "P(ower) classification",
+      "representation": "uint8"
+    },
+    {
+      "id": 132,
+      "name": "distance_classification",
+      "description": "D(istance) classification",
+      "representation": "uint8"
+    },
+    {
+      "id": 133,
+      "name": "lateral_displacement",
+      "description": "Lateral displacement",
+      "representation": "json"
+    },
+    {
+      "id": 134,
+      "name": "angular_displacement_opening_angle",
+      "description": "Angular displacement (opening angle?)",
+      "representation": "json"
+    },
+    {
+      "id": 135,
+      "name": "networking_capabilites",
+      "description": "Networking capabilites",
+      "representation": "json"
     },
     {
       "id": 5,
@@ -70,6 +112,42 @@
       "id": 12,
       "name": "max_input_voltage",
       "description": "Max Input Voltage",
+      "representation": "uint16"
+    },
+    {
+      "id": 136,
+      "name": "max_design_output_power",
+      "description": "Max Design Output Power",
+      "optional": {
+        "acoustic": true,
+        "optical": true,
+        "radio": true,
+        "no_power": true
+      },
+      "representation": "uint16"
+    },
+    {
+      "id": 137,
+      "name": "min_output_voltage",
+      "description": "Min Output Voltage",
+      "optional": {
+        "acoustic": true,
+        "optical": true,
+        "radio": true,
+        "no_power": true
+      },
+      "representation": "uint16"
+    },
+    {
+      "id": 138,
+      "name": "max_output_voltage",
+      "description": "Max Output Voltage",
+      "optional": {
+        "acoustic": true,
+        "optical": true,
+        "radio": true,
+        "no_power": true
+      },
       "representation": "uint16"
     },
     {
@@ -164,6 +242,12 @@
       "representation": "uint8"
     },
     {
+      "id": 139,
+      "name": "internal_battery_state_of_health",
+      "description": "Internal Battery state of health",
+      "representation": "uint8"
+    },
+    {
       "id": 25,
       "name": "internal_temperature",
       "description": "Internal Temperature",
@@ -228,12 +312,18 @@
     },
     {
       "id": 29,
+      "name": "system_logs",
+      "description": "System logs",
+      "representation": "json"
+    },
+    {
+      "id": 30,
       "name": "logged_data",
       "description": "Logged data",
       "representation": "json"
     },
     {
-      "id": 30,
+      "id": 31,
       "name": "local_connection_configuration",
       "description": "Local connection configuration",
       "access": {
@@ -249,7 +339,7 @@
       "representation": "json"
     },
     {
-      "id": 31,
+      "id": 32,
       "name": "gpio_state",
       "description": "GPIO state",
       "access": {
@@ -269,7 +359,7 @@
       "representation": "json"
     },
     {
-      "id": 32,
+      "id": 33,
       "name": "tx_power_transmitted_power_for_communications",
       "description": "TX Power (transmitted power for communications)",
       "access": {
@@ -285,7 +375,7 @@
       "representation": "uint8"
     },
     {
-      "id": 33,
+      "id": 34,
       "name": "rx_gain",
       "description": "RX Gain",
       "access": {
@@ -301,7 +391,7 @@
       "representation": "uint8"
     },
     {
-      "id": 34,
+      "id": 35,
       "name": "maximum_packet_size",
       "description": "Maximum packet size",
       "access": {
@@ -317,7 +407,7 @@
       "representation": "uint32"
     },
     {
-      "id": 35,
+      "id": 36,
       "name": "buffer_size",
       "description": "Buffer size",
       "access": {
@@ -333,7 +423,7 @@
       "representation": "uint32"
     },
     {
-      "id": 36,
+      "id": 37,
       "name": "mtu",
       "description": "MTU",
       "access": {
@@ -352,7 +442,7 @@
       "representation": "uint16"
     },
     {
-      "id": 37,
+      "id": 38,
       "name": "sleep_duration_wake_up_interval",
       "description": "Sleep duration (Wake-up interval)",
       "access": {
@@ -370,7 +460,7 @@
       "representation": "uint32"
     },
     {
-      "id": 38,
+      "id": 39,
       "name": "inactivity_duration_before_sleep_stay_awake_interval",
       "description": "inactivity duration before sleep (Stay awake interval)",
       "access": {
@@ -388,7 +478,7 @@
       "representation": "uint32"
     },
     {
-      "id": 39,
+      "id": 40,
       "name": "listen_duration_wake_up_probe_interval",
       "description": "listen duration (Wake-up probe interval)",
       "access": {
@@ -406,7 +496,7 @@
       "representation": "uint32"
     },
     {
-      "id": 40,
+      "id": 41,
       "name": "auto_gain_control",
       "description": "Auto gain control",
       "access": {
@@ -427,7 +517,7 @@
       "representation": "json"
     },
     {
-      "id": 41,
+      "id": 42,
       "name": "agc_compensation",
       "description": "AGC compensation",
       "access": {
@@ -448,19 +538,19 @@
       "representation": "uint16"
     },
     {
-      "id": 42,
+      "id": 43,
       "name": "average_noise_level",
       "description": "Average Noise Level",
       "representation": "json"
     },
     {
-      "id": 43,
+      "id": 44,
       "name": "average_signal_strength_indication_rssi",
       "description": "Average Signal Strength Indication (RSSI)",
       "representation": "uint8"
     },
     {
-      "id": 44,
+      "id": 45,
       "name": "average_datarate",
       "description": "Average Datarate",
       "access": {
@@ -481,7 +571,7 @@
       "representation": "uint32"
     },
     {
-      "id": 45,
+      "id": 46,
       "name": "valid_packets_received",
       "description": "Valid Packets received",
       "access": {
@@ -499,7 +589,7 @@
       "representation": "uint32"
     },
     {
-      "id": 46,
+      "id": 47,
       "name": "packets_lost",
       "description": "Packets lost",
       "access": {
@@ -520,7 +610,7 @@
       "representation": "uint32"
     },
     {
-      "id": 47,
+      "id": 48,
       "name": "header_crc_error",
       "description": "Header CRC error",
       "access": {
@@ -538,7 +628,7 @@
       "representation": "uint32"
     },
     {
-      "id": 48,
+      "id": 49,
       "name": "payload_crc_error",
       "description": "Payload CRC error",
       "access": {
@@ -559,7 +649,7 @@
       "representation": "uint32"
     },
     {
-      "id": 49,
+      "id": 50,
       "name": "fec_correction",
       "description": "FEC correction",
       "access": {
@@ -580,7 +670,7 @@
       "representation": "uint32"
     },
     {
-      "id": 50,
+      "id": 51,
       "name": "fec_failures",
       "description": "FEC failures",
       "access": {
@@ -601,7 +691,7 @@
       "representation": "uint32"
     },
     {
-      "id": 51,
+      "id": 52,
       "name": "seconds_since_last_packet_received",
       "description": "Seconds since last packet received",
       "access": {
@@ -619,7 +709,7 @@
       "representation": "uint32"
     },
     {
-      "id": 52,
+      "id": 53,
       "name": "seconds_since_last_reset_counter_command",
       "description": "Seconds since last reset counter command",
       "access": {
@@ -640,7 +730,7 @@
       "representation": "uint32"
     },
     {
-      "id": 53,
+      "id": 54,
       "name": "background_light_level",
       "description": "Background light level",
       "access": {
@@ -663,7 +753,7 @@
       "representation": "uint8"
     },
     {
-      "id": 54,
+      "id": 55,
       "name": "background_noise",
       "description": "Background noise",
       "access": {
@@ -681,7 +771,7 @@
       "representation": "uint8"
     },
     {
-      "id": 55,
+      "id": 56,
       "name": "number_of_bytes_transmitted_",
       "description": "Number of bytes transmitted ",
       "access": {
@@ -699,7 +789,7 @@
       "representation": "uint32"
     },
     {
-      "id": 56,
+      "id": 57,
       "name": "number_of_bytes_received_",
       "description": "Number of bytes received ",
       "access": {
@@ -717,7 +807,7 @@
       "representation": "uint32"
     },
     {
-      "id": 57,
+      "id": 58,
       "name": "save_config",
       "description": "Save Config",
       "optional": {
@@ -726,7 +816,7 @@
       "representation": "boolean"
     },
     {
-      "id": 58,
+      "id": 59,
       "name": "reset_counters",
       "description": "Reset Counters",
       "access": {
@@ -744,7 +834,7 @@
       "representation": "boolean"
     },
     {
-      "id": 59,
+      "id": 60,
       "name": "clear_buffer",
       "description": "Clear Buffer",
       "optional": {
@@ -753,7 +843,7 @@
       "representation": "boolean"
     },
     {
-      "id": 60,
+      "id": 61,
       "name": "clear_log",
       "description": "Clear Log",
       "access": {
@@ -776,25 +866,25 @@
       "representation": "boolean"
     },
     {
-      "id": 61,
+      "id": 62,
       "name": "",
       "description": "",
       "representation": "json"
     },
     {
-      "id": 62,
+      "id": 63,
       "name": "send_data",
       "description": "Send data",
       "representation": "string"
     },
     {
-      "id": 63,
+      "id": 64,
       "name": "receive_data",
       "description": "Receive data",
       "representation": "string"
     },
     {
-      "id": 64,
+      "id": 65,
       "name": "datetime",
       "description": "DateTime",
       "optional": {
@@ -806,7 +896,7 @@
       "representation": "uint8"
     },
     {
-      "id": 65,
+      "id": 66,
       "name": "txfirmwareimage",
       "description": "TxFirmwareImage",
       "optional": {
@@ -815,7 +905,7 @@
       "representation": "json"
     },
     {
-      "id": 66,
+      "id": 67,
       "name": "rxfirmwareimage",
       "description": "RxFirmwareImage",
       "optional": {
@@ -824,7 +914,7 @@
       "representation": "json"
     },
     {
-      "id": 67,
+      "id": 68,
       "name": "protocolmode",
       "description": "ProtocolMode",
       "optional": {
@@ -833,7 +923,7 @@
       "representation": "uint8"
     },
     {
-      "id": 68,
+      "id": 69,
       "name": "txinputpowerlimit",
       "description": "TxInputPowerLimit",
       "optional": {
@@ -842,7 +932,7 @@
       "representation": "json"
     },
     {
-      "id": 69,
+      "id": 70,
       "name": "rxoutputpowerlimit",
       "description": "RxOutputPowerLimit",
       "optional": {
@@ -851,7 +941,7 @@
       "representation": "json"
     },
     {
-      "id": 70,
+      "id": 71,
       "name": "connectiontimeout",
       "description": "ConnectionTimeout",
       "optional": {
@@ -861,7 +951,7 @@
       "representation": "json"
     },
     {
-      "id": 71,
+      "id": 72,
       "name": "defaultreportinginterval",
       "description": "DefaultReportingInterval",
       "optional": {
@@ -871,7 +961,7 @@
       "representation": "json"
     },
     {
-      "id": 72,
+      "id": 73,
       "name": "txpowerlevels",
       "description": "TxPowerLevels",
       "optional": {
@@ -880,7 +970,7 @@
       "representation": "json"
     },
     {
-      "id": 73,
+      "id": 74,
       "name": "rxpowerlevels",
       "description": "RxPowerLevels",
       "optional": {
@@ -889,7 +979,7 @@
       "representation": "json"
     },
     {
-      "id": 74,
+      "id": 75,
       "name": "txsignalstrength",
       "description": "TxSignalStrength",
       "optional": {
@@ -902,7 +992,7 @@
       "representation": "json"
     },
     {
-      "id": 75,
+      "id": 76,
       "name": "rxsignalstrength",
       "description": "RxSignalStrength",
       "optional": {
@@ -915,7 +1005,7 @@
       "representation": "json"
     },
     {
-      "id": 76,
+      "id": 77,
       "name": "powertransferstate",
       "description": "PowerTransferState",
       "optional": {
@@ -927,7 +1017,7 @@
       "representation": "uint8"
     },
     {
-      "id": 77,
+      "id": 78,
       "name": "connectionstate",
       "description": "ConnectionState",
       "optional": {
@@ -937,7 +1027,7 @@
       "representation": "uint16"
     },
     {
-      "id": 78,
+      "id": 79,
       "name": "connectionduration",
       "description": "ConnectionDuration",
       "optional": {
@@ -947,7 +1037,7 @@
       "representation": "uint16"
     },
     {
-      "id": 79,
+      "id": 80,
       "name": "txremotepoweroutputenable",
       "description": "TxRemotePowerOutputEnable",
       "optional": {
@@ -956,7 +1046,7 @@
       "representation": "boolean"
     },
     {
-      "id": 80,
+      "id": 81,
       "name": "rxpoweroutputenable",
       "description": "RxPowerOutputEnable",
       "optional": {
@@ -968,7 +1058,7 @@
       "representation": "boolean"
     },
     {
-      "id": 81,
+      "id": 82,
       "name": "txinputcurrent",
       "description": "TxInputCurrent",
       "optional": {
@@ -980,7 +1070,7 @@
       "representation": "json"
     },
     {
-      "id": 82,
+      "id": 83,
       "name": "rxoutputcurrent",
       "description": "RxOutputCurrent",
       "optional": {
@@ -992,7 +1082,7 @@
       "representation": "json"
     },
     {
-      "id": 83,
+      "id": 84,
       "name": "txinputvoltage",
       "description": "TxInputVoltage",
       "optional": {
@@ -1004,7 +1094,7 @@
       "representation": "json"
     },
     {
-      "id": 84,
+      "id": 85,
       "name": "rxoutputvoltage",
       "description": "RxOutputVoltage",
       "optional": {
@@ -1016,7 +1106,7 @@
       "representation": "json"
     },
     {
-      "id": 85,
+      "id": 86,
       "name": "txhighcurrent",
       "description": "TxHighCurrent",
       "optional": {
@@ -1028,7 +1118,7 @@
       "representation": "json"
     },
     {
-      "id": 86,
+      "id": 87,
       "name": "rxhighcurrent",
       "description": "RxHighCurrent",
       "optional": {
@@ -1040,7 +1130,7 @@
       "representation": "json"
     },
     {
-      "id": 87,
+      "id": 88,
       "name": "txhighvoltage",
       "description": "TxHighVoltage",
       "optional": {
@@ -1052,7 +1142,7 @@
       "representation": "json"
     },
     {
-      "id": 88,
+      "id": 89,
       "name": "rxhighvoltage",
       "description": "RxHighVoltage",
       "optional": {
@@ -1064,7 +1154,7 @@
       "representation": "json"
     },
     {
-      "id": 89,
+      "id": 90,
       "name": "txforeignobjectdetected",
       "description": "TxForeignObjectDetected",
       "optional": {
@@ -1076,7 +1166,7 @@
       "representation": "json"
     },
     {
-      "id": 90,
+      "id": 91,
       "name": "rxforeignobjectdetected",
       "description": "RxForeignObjectDetected",
       "optional": {
@@ -1088,7 +1178,7 @@
       "representation": "json"
     },
     {
-      "id": 91,
+      "id": 92,
       "name": "txhightemperature",
       "description": "TxHighTemperature",
       "optional": {
@@ -1100,7 +1190,7 @@
       "representation": "json"
     },
     {
-      "id": 92,
+      "id": 93,
       "name": "rxhightemperature",
       "description": "RxHighTemperature",
       "optional": {
@@ -1112,7 +1202,7 @@
       "representation": "json"
     },
     {
-      "id": 93,
+      "id": 94,
       "name": "systemfailure",
       "description": "SystemFailure",
       "optional": {
@@ -1125,7 +1215,7 @@
       "representation": "json"
     },
     {
-      "id": 94,
+      "id": 95,
       "name": "txtemperature",
       "description": "TxTemperature",
       "optional": {
@@ -1137,7 +1227,7 @@
       "representation": "json"
     },
     {
-      "id": 95,
+      "id": 96,
       "name": "rxtemperature",
       "description": "RxTemperature",
       "optional": {
@@ -1149,7 +1239,7 @@
       "representation": "json"
     },
     {
-      "id": 96,
+      "id": 97,
       "name": "txpressure",
       "description": "TxPressure",
       "optional": {
@@ -1161,7 +1251,7 @@
       "representation": "json"
     },
     {
-      "id": 97,
+      "id": 98,
       "name": "rxpressure",
       "description": "RxPressure",
       "optional": {
@@ -1173,7 +1263,7 @@
       "representation": "json"
     },
     {
-      "id": 98,
+      "id": 99,
       "name": "read",
       "description": "Read",
       "optional": {
@@ -1183,7 +1273,7 @@
       "representation": "json"
     },
     {
-      "id": 99,
+      "id": 100,
       "name": "write",
       "description": "Write",
       "optional": {
@@ -1193,7 +1283,7 @@
       "representation": "json"
     },
     {
-      "id": 100,
+      "id": 101,
       "name": "setreportinginterval",
       "description": "SetReportingInterval",
       "optional": {
@@ -1203,7 +1293,7 @@
       "representation": "json"
     },
     {
-      "id": 101,
+      "id": 102,
       "name": "getreportinginterval",
       "description": "GetReportingInterval",
       "optional": {
@@ -1213,7 +1303,7 @@
       "representation": "json"
     },
     {
-      "id": 102,
+      "id": 103,
       "name": "reset",
       "description": "Reset",
       "optional": {
@@ -1223,7 +1313,7 @@
       "representation": "json"
     },
     {
-      "id": 103,
+      "id": 104,
       "name": "temperature_2,3,4",
       "description": "Temperature 2,3,4",
       "optional": {
@@ -1235,7 +1325,7 @@
       "representation": "json"
     },
     {
-      "id": 104,
+      "id": 105,
       "name": "wpt_status",
       "description": "WPT status",
       "optional": {
@@ -1247,7 +1337,7 @@
       "representation": "json"
     },
     {
-      "id": 105,
+      "id": 106,
       "name": "current/power_control_availability",
       "description": "Current/Power Control availability",
       "access": {
@@ -1271,7 +1361,7 @@
       "representation": "json"
     },
     {
-      "id": 106,
+      "id": 107,
       "name": "current/power_controlled_staus",
       "description": "Current/Power Controlled Staus",
       "optional": {
@@ -1283,7 +1373,7 @@
       "representation": "json"
     },
     {
-      "id": 107,
+      "id": 108,
       "name": "schedule_network_for_shared_high_speed_usage",
       "description": "Schedule network for shared high-speed usage",
       "access": {
@@ -1304,7 +1394,7 @@
       "representation": "uint16"
     },
     {
-      "id": 108,
+      "id": 109,
       "name": "user_data,_source,_destinations,_ack_required",
       "description": "User data, source, destination(s), ACK required",
       "optional": {
@@ -1313,7 +1403,7 @@
       "representation": "uint8"
     },
     {
-      "id": 109,
+      "id": 110,
       "name": "source,_destination,_has_responding",
       "description": "Source, destination, has responding",
       "optional": {
@@ -1322,7 +1412,7 @@
       "representation": "uint8"
     },
     {
-      "id": 110,
+      "id": 111,
       "name": "announce_presence_for_ad_hoc_network",
       "description": "Announce presence for ad hoc network",
       "optional": {
@@ -1331,7 +1421,7 @@
       "representation": "uint32"
     },
     {
-      "id": 111,
+      "id": 112,
       "name": "requested_local_id_grant",
       "description": "Requested local ID grant",
       "optional": {
@@ -1340,7 +1430,7 @@
       "representation": "uint32"
     },
     {
-      "id": 112,
+      "id": 113,
       "name": "requested_local_id_deny",
       "description": "Requested local ID deny",
       "optional": {
@@ -1349,7 +1439,7 @@
       "representation": "uint32"
     },
     {
-      "id": 113,
+      "id": 114,
       "name": "master_declaration_of_change_of_default_smac_modulator",
       "description": "Master declaration of change of default SMAC modulator",
       "access": {
@@ -1370,7 +1460,7 @@
       "representation": "uint16"
     },
     {
-      "id": 114,
+      "id": 115,
       "name": "declare_and_configure_node_as_a_relay",
       "description": "Declare and configure node as a relay",
       "access": {
@@ -1391,7 +1481,7 @@
       "representation": "uint8"
     },
     {
-      "id": 115,
+      "id": 116,
       "name": "remove_node_as_relay",
       "description": "Remove node as relay",
       "access": {
@@ -1412,7 +1502,7 @@
       "representation": "uint8"
     },
     {
-      "id": 116,
+      "id": 117,
       "name": "declare_and_configure_node_as_a_mesh_forwarder",
       "description": "Declare and configure node as a mesh forwarder",
       "access": {
@@ -1433,7 +1523,7 @@
       "representation": "uint8"
     },
     {
-      "id": 117,
+      "id": 118,
       "name": "remove_node_as_mesh_forwarder",
       "description": "Remove node as mesh forwarder",
       "access": {
@@ -1454,7 +1544,7 @@
       "representation": "uint8"
     },
     {
-      "id": 118,
+      "id": 119,
       "name": "reset_network",
       "description": "Reset network",
       "access": {
@@ -1475,7 +1565,7 @@
       "representation": "json"
     },
     {
-      "id": 119,
+      "id": 120,
       "name": "assign_timeslot",
       "description": "Assign timeslot",
       "access": {
@@ -1496,7 +1586,7 @@
       "representation": "uint16"
     },
     {
-      "id": 120,
+      "id": 121,
       "name": "deassign_timeslot",
       "description": "Deassign timeslot",
       "access": {
@@ -1517,7 +1607,7 @@
       "representation": "json"
     },
     {
-      "id": 121,
+      "id": 122,
       "name": "turn_on_csma_for_node",
       "description": "Turn on CSMA for node",
       "access": {
@@ -1538,7 +1628,7 @@
       "representation": "json"
     },
     {
-      "id": 122,
+      "id": 123,
       "name": "turn_off_csma_for_node",
       "description": "Turn off CSMA for node",
       "access": {
@@ -1559,7 +1649,7 @@
       "representation": "json"
     },
     {
-      "id": 123,
+      "id": 124,
       "name": "allow_network_reset_if_control_lost",
       "description": "Allow network reset if control lost",
       "access": {
@@ -1580,7 +1670,7 @@
       "representation": "json"
     },
     {
-      "id": 124,
+      "id": 125,
       "name": "ask_for_capabilities",
       "description": "Ask for capabilities",
       "access": {
@@ -1599,30 +1689,30 @@
         "inductive": true
       },
       "representation": "json"
-    },
-    {
-      "id": 125,
-      "name": "report_capabilities",
-      "description": "Report capabilities",
-      "access": {
-        "dry": {
-          "read": true,
-          "write": true,
-          "write_auth": true
-        },
-        "wet": {
-          "read": true,
-          "write": true,
-          "write_auth": true
-        }
-      },
-      "optional": {
-        "inductive": true
-      },
-      "representation": "uint8"
     },
     {
       "id": 126,
+      "name": "report_capabilities",
+      "description": "Report capabilities",
+      "access": {
+        "dry": {
+          "read": true,
+          "write": true,
+          "write_auth": true
+        },
+        "wet": {
+          "read": true,
+          "write": true,
+          "write_auth": true
+        }
+      },
+      "optional": {
+        "inductive": true
+      },
+      "representation": "uint8"
+    },
+    {
+      "id": 127,
       "name": "ask_for_capabilities",
       "description": "Ask for capabilities",
       "access": {
@@ -1643,7 +1733,7 @@
       "representation": "json"
     },
     {
-      "id": 127,
+      "id": 128,
       "name": "report_capabilities",
       "description": "Report capabilities",
       "access": {
@@ -1662,96 +1752,6 @@
         "inductive": true
       },
       "representation": "uint16"
-    },
-    {
-      "id": 128,
-      "name": "system_logs",
-      "description": "System logs",
-      "representation": "json"
-    },
-    {
-      "id": 129,
-      "name": "swig_version_minor",
-      "description": "SWIG Version Minor",
-      "representation": "uint8"
-    },
-    {
-      "id": 130,
-      "name": "swig_type_version_major",
-      "description": "SWIG Type Version Major",
-      "representation": "uint8"
-    },
-    {
-      "id": 131,
-      "name": "power_classification",
-      "description": "P(ower) classification",
-      "representation": "uint8"
-    },
-    {
-      "id": 132,
-      "name": "distance_classification",
-      "description": "D(istance) classification",
-      "representation": "uint8"
-    },
-    {
-      "id": 133,
-      "name": "lateral_displacement",
-      "description": "Lateral displacement",
-      "representation": "json"
-    },
-    {
-      "id": 134,
-      "name": "angular_displacement_opening_angle",
-      "description": "Angular displacement (opening angle?)",
-      "representation": "json"
-    },
-    {
-      "id": 135,
-      "name": "networking_capabilites",
-      "description": "Networking capabilites",
-      "representation": "json"
-    },
-    {
-      "id": 136,
-      "name": "max_design_output_power",
-      "description": "Max Design Output Power",
-      "optional": {
-        "acoustic": true,
-        "optical": true,
-        "radio": true,
-        "no_power": true
-      },
-      "representation": "uint16"
-    },
-    {
-      "id": 137,
-      "name": "min_output_voltage",
-      "description": "Min Output Voltage",
-      "optional": {
-        "acoustic": true,
-        "optical": true,
-        "radio": true,
-        "no_power": true
-      },
-      "representation": "uint16"
-    },
-    {
-      "id": 138,
-      "name": "max_output_voltage",
-      "description": "Max Output Voltage",
-      "optional": {
-        "acoustic": true,
-        "optical": true,
-        "radio": true,
-        "no_power": true
-      },
-      "representation": "uint16"
-    },
-    {
-      "id": 139,
-      "name": "internal_battery_state_of_health",
-      "description": "Internal Battery state of health",
-      "representation": "uint8"
     }
   ]
 }
